@@ -1,0 +1,46 @@
+.buy {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 400;
+  color: white;
+  background: #00998f;
+  border-radius: 5px;
+  padding: 0 25px;
+  animation: pulse-info 2s infinite;
+  margin-left: 20px;
+  line-height: 2.5;
+}
+.flashing-button {
+  border-radius: 5px;
+  animation: pulse-info 2s infinite;
+}
+
+.nav-link {
+  color: lightgray;
+  &:hover {
+    color: white;
+  }
+}
+.nav-wrapper {
+  align-items: center;
+  text-align: center;
+}
+.container-fluid {
+  background: #20252c;
+}
+.nav-wrapper {
+  padding: 20px 0;
+}
+
+.logo-link {
+  display: flex;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  align-items: center;
+  .text-gold {
+    color: gold;
+  }
+}

@@ -1,0 +1,111 @@
+.container-fluid {
+  height: 100vh;
+  /*background: linear-gradient(to bottom right, #0000ff00, #008a813d);*/
+  background: url("../../../assets/images/lunabg/background.png") no-repeat;
+  background-size: cover;
+
+  .wrap-header {
+    display: flex;
+
+    .left-block {
+      padding-top: 100px;
+
+      .title_small {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 14px;
+        color: rgba(213, 213, 213, 0.91);
+      }
+
+      .title {
+        text-transform: uppercase;
+        font-size:100px;
+        font-weight: 600;
+        line-height: 0.7;
+        color: #ffffff;
+        width: 100%;
+        display: block;
+        max-width: 477px;
+        padding: 6px 0;
+      }
+
+      .title-text {
+        color: rgba(213, 213, 213, 0.91);
+      }
+
+      .button-wrapper {
+        margin-top: 55px;
+        .buy {
+          font-size: 20px;
+          text-decoration: none;
+          font-weight: 300;
+          color: white;
+          background: #00998f;
+          border-radius: 5px;
+          padding: 10px 25px;
+          &:hover {
+            animation: pulse-info 2s infinite;
+            background: #02887f;
+          }
+        }
+        .chart {
+          font-size: 22px;
+          font-weight: 400;
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: lightgray;
+          }
+        }
+      }
+      .media-wrapper {
+        margin-top: 80px;
+        .media-link {
+          margin-right: 25px;
+          border: 2px solid #14b9ae;
+          border-radius: 50%;
+          padding: 15px;
+          &:last-child{
+            margin-right: 0;
+          }
+          &:hover {
+            background: linear-gradient(to bottom right, #0000ff00, #008a813d);
+          }
+        }
+      }
+    }
+    .right-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .img-luna {
+        width: 400px;
+      }
+      .text-lunatics {
+        font-size: 18px;
+        font-weight: 500;
+        color: lightgray;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@keyframes pulse-info {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 153, 143, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+}
+.scroll {
+  width: 50px;
+}
+.scroll-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
