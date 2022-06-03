@@ -8,10 +8,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- jQuery -->
   <script src="/examples/vendors/jquery/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Bootstrap JS -->
   <script src="/examples/vendors/bootstrap-4/js/bootstrap.bundle.js"></script>
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    $(document).scroll(function(e) {
+      $(window).scrollTop() > 100 ? $('.navigation-bg').addClass('nav__color') : $('.navigation-bg').removeClass('nav__color');
+    });
+  </script>
 </body>
 </html>

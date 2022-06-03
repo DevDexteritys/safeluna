@@ -1,7 +1,10 @@
-.container-fluid {
+@import"src/style/mixins/breakpoints";
+
+.container-wrapper {
   height: 100vh;
+  padding-top: 160px;
   /*background: linear-gradient(to bottom right, #0000ff00, #008a813d);*/
-  background: url("../../../assets/images/lunabg/background.png") no-repeat;
+  background: url("../../../assets/images/lunabg/background3.png") no-repeat;
   background-size: cover;
 
   .wrap-header {
@@ -30,7 +33,15 @@
       }
 
       .title-text {
-        color: rgba(213, 213, 213, 0.91);
+        color: rgba(255, 255, 255, 0.91);
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px, 0 0 1em rgba(32, 37, 44, 0.58), 0 0 0.2em rgba(32, 37, 44, 0.71);
+
+        .text_gold {
+          color: gold;
+        }
       }
 
       .button-wrapper {
@@ -62,14 +73,15 @@
         margin-top: 80px;
         .media-link {
           margin-right: 25px;
-          border: 2px solid #14b9ae;
+          border: 2px solid gold;
           border-radius: 50%;
           padding: 15px;
+          background: linear-gradient(to bottom right, #0000ff00, rgba(243, 208, 3, 0.24));
           &:last-child{
             margin-right: 0;
           }
           &:hover {
-            background: linear-gradient(to bottom right, #0000ff00, #008a813d);
+            background: linear-gradient(to bottom right, #0000ff00, rgba(243, 208, 3, 0.41));
           }
         }
       }
@@ -106,7 +118,60 @@
 }
 .scroll-wrapper {
   margin-top: 50px;
-  position: fixed;
   bottom: 20px;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+/*------------mobile--------------*/
+@include respond-to($bp_medium) {
+ .container-wrapper {
+   background: url("../../../assets/images/lunabg/background_mb.png") no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   .wrap-header {
+     .left-block {
+       padding-top: 300px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       .title-wrapper {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding-top: 150px;
+         .title_small {
+           display: none;
+         }
+         .title {
+           font-size: 70px;
+         }
+         .title-text {
+           font-size: 20px;
+         }
+       }
+       .media-wrapper {
+         margin-top: 70px;
+       }
+       .button-wrapper {
+         margin-top: 30px;
+       }
+     }
+   }
+
+
+
+   .scroll-wrapper {
+     display: none;
+   }
+ }
+}
+
+@include respond-to($bp_small) {
+
 }
