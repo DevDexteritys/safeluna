@@ -22,7 +22,9 @@
   background: #de0155;
   align-items: center;
 }
-
+.navigation {
+  display: flex;
+}
 .nav-link {
   color: white;
   align-items: center;
